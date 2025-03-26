@@ -1,4 +1,0 @@
-
-AIzaSyCivEBihkJ92uQ5RcmLczMWFkBB5kpzCFc
-
-NuGet CLI
