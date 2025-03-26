@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "199255340128",
+    "project_id": "falling-letters-747f1",
+    "storage_bucket": "falling-letters-747f1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199255340128:android:8f4b7b5afb98be797c7f05",
+        "android_client_info": {
+          "package_name": "DefaultCompany.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCivEBihkJ92uQ5RcmLczMWFkBB5kpzCFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
