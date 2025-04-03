@@ -9,7 +9,7 @@ using UnityEngine;
 ///  Also responsible for updating player scores if they achiever a new 
 ///  highest score.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleGameOver : MonoBehaviour
@@ -44,14 +44,14 @@ public class HandleGameOver : MonoBehaviour
     {
         _score = PlayerPrefs.GetFloat("LastScore", 0);
         PlayerPrefs.DeleteAll();
-        if(PlayerController.player.Score<_score)
+        if(PlayerController.Player.Score<_score)
         {
             _winSource.PlayOneShot(_winClip);
             _highScore.SetText("New HighScore ! Congratulations !");
             _currentScore.SetText("HighScore : "+_score);
-            PlayerController.player.Score = (int)_score;
+            PlayerController.Player.Score = (int)_score;
             try{
-                await new FireBaseController().UpdateScore((int)_score,PlayerController.player.Token);
+                await new FireBaseController().UpdateScore((int)_score,PlayerController.Player.Token);
                 return;
             }
             catch (Exception e){
@@ -60,7 +60,7 @@ public class HandleGameOver : MonoBehaviour
             }
         }
         _loseSource.PlayOneShot(_loseClip);
-        _highScore.SetText("Your High Score : "+ PlayerController.player.Score);
+        _highScore.SetText("Your High Score : "+ PlayerController.Player.Score);
         _currentScore.SetText("Current Score : "+_score);
 
     }

@@ -10,7 +10,7 @@ using UnityEngine.UI;
 ///  Responsible for passing front end data to model classes. 
 ///  Implements HandleResponse and HandleButtonClick interfaces.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleLogin : MonoBehaviour , HandleResponse, HandleButtonClick {

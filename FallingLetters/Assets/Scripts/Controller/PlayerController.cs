@@ -3,7 +3,7 @@
 ///  class that manages player objects and connect views with the
 ///  player object
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class PlayerController{
@@ -11,7 +11,7 @@ public class PlayerController{
     private static Player _player= null;
 
     //Getter
-    public static Player player{
+    public static Player Player{
         get{
             return _player;
         }

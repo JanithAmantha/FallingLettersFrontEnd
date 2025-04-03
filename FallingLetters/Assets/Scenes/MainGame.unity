@@ -1077,6 +1077,7 @@ GameObject:
   - component: {fileID: 894295027}
   - component: {fileID: 894295028}
   - component: {fileID: 894295029}
+  - component: {fileID: 894295030}
   m_Layer: 0
   m_Name: Hearts
   m_TagString: Untagged
@@ -1128,14 +1129,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ad22b0bfc1edf4e83564782b3de7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreText: {fileID: 1512742094}
-  _attempts: {fileID: 109084884}
   _hearts:
   - {fileID: 3595015427204471785}
   - {fileID: 3595015427204471784}
   - {fileID: 3595015427204471783}
   _audioSource: {fileID: 1853648148}
   _audioClip: {fileID: 8300000, guid: 38eea50d8d50361478389fe146bf800d, type: 3}
+--- !u!114 &894295030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894295026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893d375a9ab4d1c479583662da76753b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreText: {fileID: 1512742094}
+  _attempts: {fileID: 109084884}
   _levelText: {fileID: 1962801776}
 --- !u!1 &949358417 stripped
 GameObject:

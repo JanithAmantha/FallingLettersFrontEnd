@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// 
 ///  Used to perform input validation during password reset request initiation.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleForgetPasswordValidate : MonoBehaviour

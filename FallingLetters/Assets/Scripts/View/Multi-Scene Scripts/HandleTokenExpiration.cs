@@ -32,7 +32,7 @@ public class HandleTokenExpiration : MonoBehaviour
     /// </summary>
     private void TokenTimer()
     {
-        if(PlayerController.player.ExpTime<= DateTimeOffset.UtcNow.ToUnixTimeSeconds())
+        if(PlayerController.Player.ExpTime<= DateTimeOffset.UtcNow.ToUnixTimeSeconds())
         {
             PlayerController.LogOut();
         }

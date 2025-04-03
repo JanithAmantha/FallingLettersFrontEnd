@@ -7,7 +7,7 @@ using TMPro;
 ///  for the relevant falling letter. This class is attached to 
 ///  all falling letter objects in MainGame.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleInput:MonoBehaviour

@@ -3,7 +3,7 @@
 ///  This interface is implemented by multiple scenes.
 ///  Decoupled all onClick functions so they can be executed independently.
 /// 
-///  This interface is 100% hard coded.
+///  This interface is 100% hand coded.
 /// 
 /// </summary>
 public interface HandleButtonClick{

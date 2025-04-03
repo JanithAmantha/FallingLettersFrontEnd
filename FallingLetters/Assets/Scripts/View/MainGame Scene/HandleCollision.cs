@@ -6,7 +6,7 @@ using UnityEngine;
 ///  when letters collide with the spikes.This class is attached to 
 ///  all falling letter objects in MainGame.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleCollision  : MonoBehaviour

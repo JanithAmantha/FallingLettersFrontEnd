@@ -39,7 +39,7 @@ public class HandleScrolls : MonoBehaviour
     private async void InitiatePopulation()
     {
         try{
-            List<DataGetUsers> players = await new FireBaseController().GetPlayerData(PlayerController.player.Token);
+            List<DataGetUsers> players = await new FireBaseController().GetPlayerData(PlayerController.Player.Token);
             players = players.OrderByDescending(player => player.score).ToList();
 
             if(players == null)

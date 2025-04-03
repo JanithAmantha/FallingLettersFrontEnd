@@ -6,7 +6,7 @@ using UnityEngine;
 ///  incase an unexpected scene transition occurs. 
 ///  Attached to multiple scenes.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleInstanceDestroy : MonoBehaviour

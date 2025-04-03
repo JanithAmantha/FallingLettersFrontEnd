@@ -7,14 +7,14 @@ using UnityEngine.SceneManagement;
 ///  Handle GoBack function in InternetChecker.
 ///  Implements HandleButtonClick.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleBackClick : MonoBehaviour, HandleButtonClick
 {
     public void OnClick()
     {
-        if(PlayerController.player == null)
+        if(PlayerController.Player == null)
         {
             SceneManager.LoadScene("Login");
         }

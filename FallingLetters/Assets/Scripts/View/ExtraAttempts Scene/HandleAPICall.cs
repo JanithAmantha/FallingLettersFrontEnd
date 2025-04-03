@@ -10,7 +10,7 @@ using System;
 ///  if the problem fetched is correctly answered.
 ///  Implements HandleButtonClick interface.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleAPICall : MonoBehaviour, HandleButtonClick
@@ -33,7 +33,7 @@ public class HandleAPICall : MonoBehaviour, HandleButtonClick
     {
         try{
             _apiController = new APIController();
-            await _apiController.apiConnection.FetchBananaDataAsync();
+            await _apiController.ApiConnection.FetchBananaDataAsync();
             LoadImage();
 
         }catch(Exception e)
@@ -71,7 +71,7 @@ public class HandleAPICall : MonoBehaviour, HandleButtonClick
     /// </summary>
     private async void LoadImage()
     {
-        if (!_apiController.apiConnection.urlUnlocked)
+        if (!_apiController.ApiConnection.urlUnlocked)
         {
             /*urlUnlocked is used to check if the image URL has been fetched by the model classes.
             If not the process of loading the image will cause errors. (It will try to load the image before the URL is fetched) */
@@ -79,12 +79,12 @@ public class HandleAPICall : MonoBehaviour, HandleButtonClick
         }
 
         try{
-            await _apiController.apiConnection.LoadImageAsync(_apiController.apiConnection.bananaResponse.question);
-            Texture2D texture2D = _apiController.apiConnection.returnedImage;
+            await _apiController.ApiConnection.LoadImageAsync(_apiController.ApiConnection.bananaResponse.question);
+            Texture2D texture2D = _apiController.ApiConnection.returnedImage;
             if (texture2D != null)
             {
                 _image.sprite = Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
-                _hint.SetText("Hint:" + _hintsArray[_apiController.apiConnection.bananaResponse.solution]);
+                _hint.SetText("Hint:" + _hintsArray[_apiController.ApiConnection.bananaResponse.solution]);
             }
         }
         catch (Exception e){
@@ -102,7 +102,7 @@ public class HandleAPICall : MonoBehaviour, HandleButtonClick
     /// 
     /// </summary>
     private void ValueEntered(){
-        if(_answerField.text == _apiController.apiConnection.bananaResponse.solution.ToString())
+        if(_answerField.text == _apiController.ApiConnection.bananaResponse.solution.ToString())
         {
             SceneManager.LoadScene("MainGame");
         }

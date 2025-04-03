@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 ///  Load MainMenu Scene.
 ///  Implements HandleButtonClick.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleMainMenuClick : MonoBehaviour, HandleButtonClick

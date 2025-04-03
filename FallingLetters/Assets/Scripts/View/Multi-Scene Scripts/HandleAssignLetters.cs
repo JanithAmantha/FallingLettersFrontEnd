@@ -6,7 +6,7 @@ using TMPro;
 ///  Responsible for assigning letters to each falling letter object.
 ///  Used both in MainGame and MainMenu scenes.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleAssignLetters:MonoBehaviour

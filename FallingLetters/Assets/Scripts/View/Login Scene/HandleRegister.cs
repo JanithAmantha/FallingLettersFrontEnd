@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 ///  Responsible for passing front end data to model classes. 
 ///  Implements HandleResponse and HandleButtonClick interfaces.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleRegister:MonoBehaviour, HandleResponse, HandleButtonClick

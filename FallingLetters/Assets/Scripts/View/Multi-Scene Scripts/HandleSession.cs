@@ -8,19 +8,19 @@ using UnityEngine.SceneManagement;
 ///  is expired. Hence, this directs the player to login page the moment player object is nulled.
 ///  The class is used by all the scenes available in the game.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleSession : MonoBehaviour
 {
     /// <summary>
-    /// 
+    ///
     ///  Checks if the player object is null every frame.
     /// 
     /// </summary>
     private void Update()
     {
-        if(PlayerController.player==null)
+        if(PlayerController.Player==null)
         {
             SceneManager.LoadScene("Login");
         }

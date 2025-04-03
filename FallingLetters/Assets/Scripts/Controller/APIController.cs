@@ -3,7 +3,7 @@
 ///  This class connects view scripts in ExtraAttempts with
 ///  APIConnection class in models 
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class APIController{
@@ -11,7 +11,7 @@ public class APIController{
     private APIConnection _apiConnection;
 
     //Getter
-    public APIConnection apiConnection{
+    public APIConnection ApiConnection{
         get{
             return _apiConnection;
         }

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 ///  Logs out of the game and loads Login Scene.
 ///  Implements HandleButtonClick.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleLogOutClicked : MonoBehaviour, HandleButtonClick

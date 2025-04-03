@@ -5,7 +5,7 @@
 ///  interface because it needed to be implemented differently and independently.
 ///  (Low coupling)
 /// 
-///  This interface is 100% hard coded.
+///  This interface is 100% hand coded.
 /// 
 /// </summary>
 public interface HandleResponse{

@@ -35,7 +35,7 @@ public class FirebaseManager
     /// <param name="password"> password provided by the user </param>
     /// <param name="username"> username provided by the user </param>
     /// 
-    /// <returns> returns RegisterResponse type object </returns>
+    /// <returns> returns DataRegisterResponse type object </returns>
     public async Task<DataRegisterResponse> Register(string email, string password, string username)
     {
         var registerUser = new DataRegisterUser { email = email, password = password, username = username };
@@ -70,7 +70,7 @@ public class FirebaseManager
     /// <param name="email"> email provided by the user  </param>
     /// <param name="password"> password provided by the user </param>
     /// 
-    /// <returns> returns a LoginResponse object </returns>
+    /// <returns> returns a DataLoginResponse object </returns>
     public async Task<DataLoginResponse> Login(string email, string password)
     {
         var loginUser = new DataLoginUser { email = email, password = password };
@@ -105,7 +105,7 @@ public class FirebaseManager
     /// </summary>
     /// 
     /// <param name="token"> token user received by firebase </param>
-    /// <returns> returns a list of objects in GetUsers type </returns>
+    /// <returns> returns a list of objects in DataGetUsers type </returns>
     public async Task<List<DataGetUsers>> GetLeaderboard(string token)
     {
         _client.DefaultRequestHeaders.Clear();

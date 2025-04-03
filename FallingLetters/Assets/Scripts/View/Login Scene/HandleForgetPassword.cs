@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 ///  Responsible for sending user email to model classes to send password reset requests.
 ///  Implements HandleButtonClick and HandleResponse. 
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleForgetPassword : MonoBehaviour, HandleResponse, HandleButtonClick

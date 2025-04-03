@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,21 +6,19 @@ using UnityEngine.SceneManagement;
 ///  The core of the game that manages scores, attempts and level up.
 ///  Follows Singleton design pattern.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleGameLogic : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _scoreText;
-    [SerializeField] private TMP_Text _attempts;
     [SerializeField] private GameObject[] _hearts;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _audioClip;
     [SerializeField] private static HandleGameLogic _instance;
-    [SerializeField] private TMP_Text _levelText;
-    private static int _collisionCount = 0;
+    private int _collisionCount = 0;
+    private int _temporaryScore = 0;
     private int _attemptCount=3;
-    private static int _score;
+    private int _score;
     private float _gravityIncreased = 0.5f;
     private int _level = 1;
 
@@ -31,10 +28,44 @@ public class HandleGameLogic : MonoBehaviour
             return _score;
         }
     }
+
+    /* Responsibility of TemporaryScore is to make sure the Level up occurs smoothly.*/
+    public int TemporaryScore{
+        get{
+            return _temporaryScore;
+        }
+        set{
+            _temporaryScore = value;
+        }
+    }
+
+    public int Level{
+        get{
+            return _level;
+        }
+        set{
+            _level = value;
+        }
+    }
+
+    public int AttemptCount{
+        get{
+            return _attemptCount;
+        }
+    }
     
     public static HandleGameLogic Instance{
         get{
             return _instance;
+        }
+    }
+
+    public float GravityIncreased{
+        get{
+            return _gravityIncreased;
+        }
+        set{
+            _gravityIncreased = value;
         }
     }
 
@@ -61,19 +92,6 @@ public class HandleGameLogic : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-    }
-
-    /// <summary>
-    /// 
-    ///  Responsibility of this Update function is to display texts to users the moment they change.
-    ///  (attempts, level, score)
-    /// 
-    /// </summary>
-    private void Update()
-    {
-        _attempts.SetText(_attemptCount.ToString());
-        _scoreText.SetText("Score : "+_score.ToString());
-        _levelText.SetText(_level.ToString());
     }
 
     /// <summary>
@@ -118,40 +136,6 @@ public class HandleGameLogic : MonoBehaviour
 
     /// <summary>
     /// 
-    ///  This function is used to reset all the values 
-    ///  when the game is over.
-    /// 
-    /// </summary>
-    private void ResetValues()
-    {
-        _score=0;
-        _collisionCount=0;
-    }
-
-    /// <summary>
-    /// 
-    ///  Every time a player gets a score thats divisible by 10
-    ///  The gravity of falling letters is increased by 0.2. Each increment
-    ///  in gravity is considered a level up. This function is responsible 
-    ///  for the level up task and increase in gravity.
-    /// 
-    /// </summary>
-    /// 
-    /// <returns> increased gravity number </returns>
-    public float LevelUp()
-    {
-        Debug.Log(_score);
-        if((_score % 10 == 0)&&(_score > 10))
-        {
-            _level++;
-            _gravityIncreased += (float)0.2;
-        }
-
-        return _gravityIncreased;
-    }
-
-    /// <summary>
-    /// 
     ///  Responsible for resetting values, passing data and 
     ///  loading the GameOver Scene when the attempts run out.
     /// 
@@ -160,16 +144,17 @@ public class HandleGameLogic : MonoBehaviour
     {
         PlayerPrefs.SetFloat("LastScore", _score);
         PlayerPrefs.Save();
-        ResetValues();
-        Destroy(this.gameObject);
+        DestroyObject();
         SceneManager.LoadScene("GameOver");
     }
 
+    /// <summary>
+    ///
+    ///  To Destroy Game Logic Objects when switching to other scenes 
+    /// 
+    /// </summary>
     public void DestroyObject()
     {
         Destroy(this.gameObject);
-    }
-    
+    }    
 }
-
-

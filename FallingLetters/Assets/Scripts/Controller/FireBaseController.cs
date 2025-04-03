@@ -8,7 +8,7 @@ using UnityEngine;
 ///  FireBaseManager class in models. Objects of this class
 ///  access the Firebase functions on behalf of the view scripts 
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class FireBaseController{

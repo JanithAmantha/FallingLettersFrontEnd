@@ -6,7 +6,7 @@ using UnityEngine;
 ///  Handle panel transition on button clicks.
 ///  Responsible for panel transition upon a button click.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class HandleOnClick : MonoBehaviour, HandleButtonClick{

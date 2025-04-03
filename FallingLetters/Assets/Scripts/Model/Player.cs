@@ -2,7 +2,7 @@
 /// 
 ///  Class that represents the Players of the game.
 /// 
-///  This class is 100% hard coded.
+///  This class is 100% hand coded.
 /// 
 /// </summary>
 public class Player
